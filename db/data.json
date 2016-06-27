@@ -1,0 +1,175 @@
+[
+  {
+    "name": "ASAP Ferg",
+    "city": "Harlem",
+    "state": "NY",
+    "country": "USA",
+    "details": "ASAP!!!!!!!",
+    "sounds": "https://soundcloud.com/asapferg"
+  },
+  {
+    "name": "Diplo",
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "USA",
+    "details": "Mad Decent!!!!!!!",
+    "sounds": "https://soundcloud.com/maddecent"
+  },
+  {
+    "name": "Jeezy",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "USA",
+    "details": "put on",
+    "sounds": "https://twitter.com/jeezy?lang=en"
+  },
+  {
+    "name": "Skrillex",
+    "city": "Los Angeles",
+    "state": "CA",
+    "country": "USA",
+    "details": "Owsla!!!!!!!",
+    "sounds": "https://soundcloud.com/skrillex"
+  },
+  {
+    "name": "Goldlink",
+    "city": "Washington",
+    "state": "DC",
+    "country": "USA",
+    "details": "Soulection!!!!",
+    "sounds": "https://soundcloud.com/goldlink"
+  },
+  {
+    "name": "Mr. Carmack",
+    "city": "Honolulu",
+    "state": "Hawaii",
+    "country": "USA",
+    "details": "genius!!!!",
+    "sounds":"https://soundcloud.com/mr_carmack"
+  },
+  {
+    "name": "ZHU",
+    "city": "Berkely",
+    "state": "California",
+    "country": "USA",
+    "details": "genius!!!!",
+    "sounds": "https://soundcloud.com/zhu"
+  },
+  {
+    "name": "Kanye West",
+    "city": "Chicago",
+    "state": "Illinois",
+    "country": "USA",
+    "details": "genius!!!!",
+    "sounds": "https://soundcloud.com/kanyewest"
+  },
+  {
+    "name": "Drake",
+    "city": "Toronto",
+    "state": "",
+    "country": "Canada",
+    "details": "OVOXO",
+    "sounds": "https://soundcloud.com/octobersveryown"
+  },
+  {
+    "name": "2 Chainz",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "country": "USA",
+    "details": "2Chainz!!!!!",
+    "sounds": "https://soundcloud.com/2chainz"
+  },
+  {
+    "name": "Gent & Jawns",
+    "city": "Washington",
+    "state": "DC",
+    "country": "USA",
+    "details": "collecta",
+    "sounds": "https://soundcloud.com/gentandjawns"
+  },
+  {
+    "name": "Future",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "USA",
+    "details": "what a time...",
+    "sounds": "https://soundcloud.com/futureisnow"
+  },
+  {
+    "name": "Falcons",
+    "city": "Los Angeles",
+    "state": "CA",
+    "country": "USA",
+    "details": "",
+    "sounds": "https://soundcloud.com/oaklandfalcons"
+  },
+  {
+    "name": "Rihanna",
+    "city": "",
+    "state": "",
+    "country": "Barbados",
+    "details": "",
+    "sounds": "http://www.rihannanow.com"
+  },
+  {
+    "name": "Calvin Harris",
+    "city": "",
+    "state": "",
+    "country": "United Kingdom",
+    "details": "",
+    "sounds": "http://calvinharris.com/"
+  },
+  {
+    "name": "Alesso",
+    "city": "Stockholm",
+    "state": "",
+    "country": "Sweden",
+    "details": "",
+    "sounds": "https://soundcloud.com/alesso"
+  },
+  {
+    "name": "Action Bronson",
+    "city": "Queens",
+    "state": "NY",
+    "country": "USA",
+    "details": "",
+    "sounds": "https://soundcloud.com/actionbronson"
+  },
+  {
+    "name": "Anna Lunoe",
+    "city": "Sydney",
+    "state": "",
+    "country": "Australia",
+    "details": "",
+    "sounds": "https://soundcloud.com/anna-lunoe"
+  },
+  {
+    "name": "Kaytranada",
+    "city": "Montreal",
+    "state": "",
+    "country": "Canada",
+    "details": "",
+    "sounds": "https://soundcloud.com/kaytranada"
+  },
+  {
+    "name": "Flume",
+    "city": "Sydney",
+    "state": "",
+    "country": "Australia",
+    "details": "",
+    "sounds": "https://soundcloud.com/flume"
+  },
+  {
+    "name": "Disclosure",
+    "city": "",
+    "state": "",
+    "country": "United Kingdom",
+    "details": "",
+    "sounds": "https://soundcloud.com/disclosuremusic"
+  }
+
+
+
+
+
+]
