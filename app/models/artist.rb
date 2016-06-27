@@ -1,4 +1,5 @@
 class Artist < ActiveRecord::Base
   has_many :affiliations
-  has_many :affiliates, through: :affiliations
+  has_many :affiliates, through: :affiliations,
+                        dependent: :destroy
 end
