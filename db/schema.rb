@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160627001628) do
   enable_extension "plpgsql"
 
   create_table "affiliations", force: :cascade do |t|
-    t.string   "name"
+    t.string   "song"
     t.integer  "artist_id"
     t.integer  "affiliate_id"
     t.datetime "created_at",   null: false
