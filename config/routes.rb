@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'artists#index'
+  root 'application#index'
+  # get '*path' => 'application#index'
   resources :artists
 
   # The priority is based upon order of creation: first created -> highest priority.
