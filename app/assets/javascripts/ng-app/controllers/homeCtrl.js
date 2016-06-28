@@ -7,5 +7,6 @@ angular.module('affApp')
 				$http.get('/artists.json').then(function(res){
 					console.log(res);
 				})
+				$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 		}
 	]);
