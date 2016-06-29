@@ -4,9 +4,14 @@ angular.module('affApp')
 		'$http',
 		function ($scope, $http) {
 				$scope.hello = 'go',
-				$http.get('/artists.json').then(function(res){
+				$scope.keywords;
+				$http.get('/artists', {params: {search: 'f'}}).then(
+					function(res){
 					console.log(res);
-				})
+					}
+					function(error){
+						console.log(error);
+					});
 				$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 3 };
 				$scope.options = {
 					styles: [
