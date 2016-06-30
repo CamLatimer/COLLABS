@@ -2,6 +2,7 @@
 @import "_search.scss";
 @import "_lists.scss";
 @import "_map.scss";
+@import "_headers.scss";
 
 html, body{
   height: 100%;
@@ -10,6 +11,7 @@ html, body{
   font-family: 'Nova Slim', cursive;
   font-weight: 400;
   font-style: italic;
+  overflow: hidden;
 }
 ul{
   list-style: none;

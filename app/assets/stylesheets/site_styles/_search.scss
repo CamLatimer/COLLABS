@@ -2,22 +2,32 @@
 position: relative;
 float: right;
 width: 280px;
+min-height: 41px;
 color: white;
 margin: 0 0 0 20px;
-padding: 0;
+padding: -2px;
 background: rgba(0,0,0, .8);
 display: inline-block;
 }
-form{
-  background: rgba(0,0,0, .0);
+.search__container{
+  margin: 19px 0 0 0;
+  max-height: 100%;
+  overflow: auto;
 }
-.search__box{
+.search-form-holder{
+  position: fixed;
+  display: inline-block;
+}
+form{
+  background: black;
+}
+input[type="search"]{
   margin: 0;
   border: none;
   color: gray;
   font-size: 2em;
   width: 80%;
-  background: rgba(0,0,0, 0);
+  background: black;
   font-family: 'Nova Slim', cursive;
   font-weight: 400;
   font-style: italic;
@@ -33,4 +43,23 @@ input[type="submit"]{
   float: right;
   margin: 0;
   width: 50px;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track-piece {
+    // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.8);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
