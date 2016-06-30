@@ -2,20 +2,20 @@
 </ui-gmap-google-map>
 
 <div class="container search search__container">
-  <div class="row">
+  <div class="search-form-holder">
     <form class="search__form" data-ng-submit="search()">
       <input type="search" data-ng-model="keywords" autofocus class="search__input search__box" placeholder="search">
       <input type="submit" class="search__input search__submit" "btn">
     </form>
   </div>
   <ul class="list results-list">
-    <li data-ng-repeat="artist in artists">
+    <li class="li-artist" data-ng-repeat="artist in artists">
       <div class="li-img">
         <img class="li-img" src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" />
       </div>
       <div class="li-text">
         <h4 class="li-head">{{artist.name}}</h4>
-        <p class="li-sub">{{artist.city}}</p>
+        <p class="li-sub">{{artist.city}}, {{artist.country}}</p>
       </div>
     </li>
   </ul>
