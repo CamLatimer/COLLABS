@@ -1,17 +1,19 @@
-I'm building a site that displays the affiliations that rappers/dj's have to other rappers and dj's.
+I'm building a site that displays the affiliations that rappers and dj's have to other rappers and dj's.
 The plans and scope of this project definitely may change.  But Here are some user stories and
 the general structure of the app as of 6/26/2016:
 
 User Stories:
 
+Users can see who an artist is affiliated with on a map.
+
 Users can search through all artists or all crews via a search box on the site's main page.
 The results of the search are displayed in a list.
 
-Users can click on an artist or crew in the list and see the other affiliated artists
-or see all crew members.  The clicked artist/crew affiliates are displayed as markers
-on a map at their respective location.
+When a user clicks on an artist in the list, the map is populated with markers
+representing affiliated artists and a list with the affiliated artists is shown.
 
-Users can see info for each artist/crew at individual profile pages
+When an affiliated artist is clicked on, a new list and markers are show with that
+artist's affiliates.
 
 App structure
 
