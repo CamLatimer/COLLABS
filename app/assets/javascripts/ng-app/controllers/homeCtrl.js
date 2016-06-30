@@ -6,12 +6,12 @@ angular.module('affApp')
 
 				$scope.keywords;
 				$scope.artists;
+				$scope.artist_id;
 
 				$scope.search = function(){
 					console.log($scope.keywords);
 					$http.get('/artists', {params: {search: $scope.keywords}}).then(
 						function(res){
-
 						$scope.artists = res.data;
 						console.log($scope.artists);
 					},
@@ -19,6 +19,17 @@ angular.module('affApp')
 						console.log(error);
 					});
 			}
+				$scope.getAff = function(id){
+					console.log('element clicked');
+					$http.get('artist_aff/' + id).then(
+						function(res){
+							console.log(res);
+						},
+						function(error){
+							console.log(error);
+						}
+					)
+				}
 
 				$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 3 };
 				$scope.options = {
