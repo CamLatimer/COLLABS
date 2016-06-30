@@ -1,0 +1,36 @@
+.container{
+position: relative;
+float: right;
+width: 280px;
+color: white;
+margin: 0 0 0 20px;
+padding: 0;
+background: rgba(0,0,0, .8);
+display: inline-block;
+}
+form{
+  background: rgba(0,0,0, .0);
+}
+.search__box{
+  margin: 0;
+  border: none;
+  color: gray;
+  font-size: 2em;
+  width: 80%;
+  background: rgba(0,0,0, 0);
+  font-family: 'Nova Slim', cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+input:focus{
+  outline: none;
+}
+input[type="submit"]{
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  height: 40px;
+  float: right;
+  margin: 0;
+  width: 50px;
+}

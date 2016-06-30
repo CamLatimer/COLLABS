@@ -3,28 +3,26 @@ angular.module('affApp')
 		'$scope',
 		'$http',
 		function ($scope, $http) {
-				$scope.hello = 'go',
+
 				$scope.keywords;
-				$http.get('/artists', {params: {search: 'f'}}).then(
-					function(res){
-					console.log(res);
-					}
+				$scope.artists;
+
+				$scope.search = function(){
+					console.log($scope.keywords);
+					$http.get('/artists', {params: {search: $scope.keywords}}).then(
+						function(res){
+
+						$scope.artists = res.data;
+						console.log($scope.artists);
+					},
 					function(error){
 						console.log(error);
 					});
+			}
+
 				$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 3 };
 				$scope.options = {
 					styles: [
-								    // {
-								    //     "stylers": [
-								    //         {
-								    //             "hue": "#007fff"
-								    //         },
-								    //         {
-								    //             "saturation": 0
-								    //         }
-								    //     ]
-								    // },
 								    {
 								        "featureType": "water",
 								        "stylers": [
@@ -38,7 +36,7 @@ angular.module('affApp')
 								        "elementType": "labels",
 								        "stylers": [
 								            {
-								                "visibility": "on"
+								                "visibility": "off"
 								            }
 								        ]
 								    },
