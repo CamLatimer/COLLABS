@@ -18,6 +18,7 @@ angular.module('affApp')
 					function(error){
 						console.log(error);
 					});
+				}
 
 				// searches through artists and bring back the affiliates for a given artist
 				$scope.getAff = function(id, index){
