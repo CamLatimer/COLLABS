@@ -15,4 +15,10 @@ class ArtistsController < ApplicationController
 
     render :json => @artists
   end
+  # make routing to bring back the artist's affiliates
+  def get_aff
+    @artist = Artist.find(params[:id])
+    @affiliates = @artist.affiliates
+    render :json => @affiliates
+  end
 end
