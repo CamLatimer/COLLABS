@@ -1,6 +1,6 @@
 class Artist < ActiveRecord::Base
-  has_many :affiliations
-  has_many :affiliates, through: :affiliations,
+  has_many :collaborations
+  has_many :collaborators, through: :collaborations,
                         dependent: :destroy
 
   def self.search(search)

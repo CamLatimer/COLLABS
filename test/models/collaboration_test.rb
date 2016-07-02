@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AffiliationTest < ActiveSupport::TestCase
+class CollaborationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

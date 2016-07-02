@@ -9,7 +9,7 @@ data = JSON.parse(File.read("db/data.json"))
 
 
 Artist.destroy_all
-Affiliation.destroy_all
+Collaboration.destroy_all
 Artist.create!(data)
 
 car = Artist.find_by(name: 'Mr. Carmack')
@@ -28,14 +28,14 @@ future = Artist.find_by(name: 'Future')
 calvin = Artist.find_by(name: 'Calvin Harris')
 rih = Artist.find_by(name: 'Rihanna')
 
-falc.affiliates << [gold, car]
+falc.collaborators << [gold, car]
 
-ferg.affiliates << [future]
+ferg.collaborators << [future]
 
-skril.affiliates << [diplo, ferg, zhu]
+skril.collaborators << [diplo, ferg, zhu]
 
-diplo.affiliates << [gj, chainz]
+diplo.collaborators << [gj, chainz]
 
-chainz.affiliates << [jeezy, kanye, drake]
+chainz.collaborators << [jeezy, kanye, drake]
 
-drake.affiliates << [jeezy, kanye, future]
+drake.collaborators << [jeezy, kanye, future]

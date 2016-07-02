@@ -11,22 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160627191738) do
+ActiveRecord::Schema.define(version: 20160702141600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "affiliations", force: :cascade do |t|
-    t.string   "song"
-    t.integer  "artist_id"
-    t.integer  "affiliate_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "affiliations", ["affiliate_id"], name: "index_affiliations_on_affiliate_id", using: :btree
-  add_index "affiliations", ["artist_id", "affiliate_id"], name: "index_affiliations_on_artist_id_and_affiliate_id", unique: true, using: :btree
-  add_index "affiliations", ["artist_id"], name: "index_affiliations_on_artist_id", using: :btree
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -39,6 +27,18 @@ ActiveRecord::Schema.define(version: 20160627191738) do
     t.string   "sounds"
   end
 
-  add_foreign_key "affiliations", "artists"
-  add_foreign_key "affiliations", "artists", column: "affiliate_id"
+  create_table "collaborations", force: :cascade do |t|
+    t.string   "song"
+    t.integer  "artist_id"
+    t.integer  "collaborator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "collaborations", ["artist_id", "collaborator_id"], name: "index_collaborations_on_artist_id_and_collaborator_id", unique: true, using: :btree
+  add_index "collaborations", ["artist_id"], name: "index_collaborations_on_artist_id", using: :btree
+  add_index "collaborations", ["collaborator_id"], name: "index_collaborations_on_collaborator_id", using: :btree
+
+  add_foreign_key "collaborations", "artists"
+  add_foreign_key "collaborations", "artists", column: "collaborator_id"
 end

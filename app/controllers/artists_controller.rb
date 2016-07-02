@@ -1,24 +1,30 @@
 class ArtistsController < ApplicationController
   def index
-    # @artists = Artist.includes(:affiliates).all
-    @artists = Artist.all
+
+    @myArtists = []
+
     if params[:search]
-       @artists = Artist.search(params[:search]).order("created_at DESC")
+      @artists = Artist.includes(:collaborators).search(params[:search]).order("created_at DESC")
+      @artists.each do |artist|
+        artistObj = {}
+        artistObj['info'] = artist
+        artistObj['collabs'] = artist.collaborators
+        @myArtists << artistObj
+      end
+
      else
-       @artists = Artist.all.order('created_at DESC')
+       @artists = Artist.includes(:collaborators).all.order('created_at DESC')
+       @artists.each do |artist|
+         artistObj = {}
+         artistObj['info'] = artist
+         artistObj['collabs'] = artist.collaborators
+         @myArtists << artistObj
+       end
+
      end
 
-    # @artists.each do |artist|
-    #   artist["affiliates"] = []
-    #   artist["affiliates"] << artist.affiliates
-    # end
+    render :json => @myArtists
 
-    render :json => @artists
   end
-  # make routing to bring back the artist's affiliates
-  def get_aff
-    @artist = Artist.find(params[:id])
-    @affiliates = @artist.affiliates
-    render :json => @affiliates
-  end
+  
 end

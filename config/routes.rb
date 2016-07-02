@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get '*path' => 'application#index'
   resources :artists
 
-  get 'artist_aff/:id' => 'artists#get_aff'
+  get 'artist_collab/:id' => 'artists#get_collab'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
