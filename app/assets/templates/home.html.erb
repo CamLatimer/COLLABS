@@ -1,14 +1,34 @@
 <ui-gmap-google-map center='map.center' zoom='map.zoom' options='options'>
 </ui-gmap-google-map>
 
-<div class="container search search__container">
+<div class="container search search__pane">
   <div class="search-form-holder">
     <form class="search__form" data-ng-submit="search()">
-      <input type="search" data-ng-model="keywords" autofocus class="search__input search__box" placeholder="search">
-      <input type="submit" class="search__input search__submit" "btn">
+      <input type="search" data-ng-model="keywords" autofocus class="search-box" placeholder="search">
+      <input type="submit" class="submit-btn btn" value="GO">
     </form>
   </div>
-  <ul class="list results-list">
+  <div class="results-container">
+    <div class="result" data-ng-repeat="artist in artists" data-ng-click="showCollabs(this)">
+      <div class="artist-display">
+        <div class="result-info">
+          <h4 class="result-header">{{artist.info.name}}</h4>
+          <h5 class="result-header">{{artist.info.city}}</h5>
+          <h5 class="result-header">{{artist.info.country}}</h5>
+        </div>
+        <div class="display-pic">
+          <img class="artist-pic" src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="" />
+        </div>
+      </div>
+      <div class="drop-down result-affiliates" data-ng-show="showing">
+        <h5>Collaborators: </h5>
+        <h6 class="collab-item" data-ng-repeat="collab in artist.collabs">{{collab.name}}</h6>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <ul class="list results-list">
     <li class="li-artist" data-ng-repeat="artist in artists" data-ng-click="getAff(artist.id)">
       <div class="li-img">
         <img class="li-img" src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" />
@@ -16,7 +36,12 @@
       <div class="li-text">
         <h4 class="li-head">{{artist.info.name}}</h4>
         <p class="li-sub">{{artist.info.city}}, {{artist.info.country}}</p>
+        <ul class="list">
+          <li class="list-collab" data-ng-repeat="collaborator in artist.collabs">
+            <h6>{{collaborator.name}}</h6>
+          </li>
+        </ul>
       </div>
     </li>
-  </ul>
+  </ul> -->
 </div>
