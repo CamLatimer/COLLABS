@@ -1,22 +1,16 @@
-angular.module('affApp')
+"use strict";
+(function(){
+	angular.module('affApp')
 	.controller('HomeCtrl', [
 		'$scope',
 		'$http',
 		function ($scope, $http) {
 
+				// scope variables
 				$scope.keywords;
 				$scope.artists;
 
-				$scope.showCollabs = function(context){
-					if(context.showing === true){
-						context.showing = false;
-					} else {
-						context.showing = true;
-					}
-
-				}
-
-				// searches through all artists and bring back individual objects with
+				// searches through all artists and brings back individual objects with
 				// // info and list of collaborators
 				$scope.search = function(){
 					$scope.affiliates = [];
@@ -30,45 +24,15 @@ angular.module('affApp')
 					});
 				}
 
-				$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 3 };
-				$scope.options = {
-					styles: [
-								    {
-								        "featureType": "water",
-								        "stylers": [
-								            {
-								                "color": "#000000"
-								            }
-								        ]
-								    },
-								    {
-								        "featureType": "administrative.country",
-								        "elementType": "labels",
-								        "stylers": [
-								            {
-								                "visibility": "off"
-								            }
-								        ]
-								    },
-										{
-								        "featureType": "landscape.natural",
-								        "elementType": "all",
-								        "stylers": [
-								            {
-								                "color": "#ffffff"
-								            }
-								        ]
-								    },
-										{
-								        "featureType": "administrative.province",
-								        "elementType": "labels",
-								        "stylers": [
-								            {
-								                "visibility": "off"
-								            }
-								        ]
-								    }
-									]
+				// trigger ng-show to display the collaborators for each artist on click
+				$scope.showCollabs = function(context){
+					if(context.showing === true){
+						context.showing = false;
+					} else {
+						context.showing = true;
+					}
 				}
+
 		}
 	]);
+})();

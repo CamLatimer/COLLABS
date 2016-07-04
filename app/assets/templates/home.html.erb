@@ -1,5 +1,7 @@
-<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options'>
-</ui-gmap-google-map>
+<div class="map-container" data-ng-controller="MapCtrl">
+  <ui-gmap-google-map center='map.center' zoom='map.zoom' options='options'>
+  </ui-gmap-google-map>
+</div>
 
 <div class="container search search__pane">
   <div class="search-form-holder">
@@ -24,24 +26,7 @@
         <h5>Collaborators: </h5>
         <h6 class="collab-item" data-ng-repeat="collab in artist.collabs">{{collab.name}}</h6>
       </div>
-
     </div>
   </div>
 
-  <!-- <ul class="list results-list">
-    <li class="li-artist" data-ng-repeat="artist in artists" data-ng-click="getAff(artist.id)">
-      <div class="li-img">
-        <img class="li-img" src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" />
-      </div>
-      <div class="li-text">
-        <h4 class="li-head">{{artist.info.name}}</h4>
-        <p class="li-sub">{{artist.info.city}}, {{artist.info.country}}</p>
-        <ul class="list">
-          <li class="list-collab" data-ng-repeat="collaborator in artist.collabs">
-            <h6>{{collaborator.name}}</h6>
-          </li>
-        </ul>
-      </div>
-    </li>
-  </ul> -->
 </div>
