@@ -7,6 +7,15 @@ angular.module('affApp')
 				$scope.keywords;
 				$scope.artists;
 
+				$scope.showCollabs = function(context){
+					if(context.showing === true){
+						context.showing = false;
+					} else {
+						context.showing = true;
+					}
+
+				}
+
 				// searches through all artists and bring back individual objects with
 				// // info and list of collaborators
 				$scope.search = function(){

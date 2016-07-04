@@ -12,5 +12,4 @@
 !/log/.keep
 /tmp
 /node_modules
-/gulpfile.js
 /package.json
