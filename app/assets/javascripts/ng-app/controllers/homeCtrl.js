@@ -33,6 +33,15 @@
 					}
 				}
 
+				// goal: display a marker on the map for each of an artist's collaborators
+        // problem: how to use google maps geocode api to grab long / lat and
+        // use that data with the googlemaps-ui directive to make markers
+        // approach:
+        // grab long and lat for each one of the collaborators of a selected artist
+				// and put them into
+        // an array for the googlemaps directive to use
+        //
+
 		}
 	]);
 })();
