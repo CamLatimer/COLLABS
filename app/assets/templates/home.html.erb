@@ -11,7 +11,7 @@
     </form>
   </div>
   <div class="results-container">
-    <div class="result" data-ng-repeat="artist in artists" data-ng-click="showCollabs(this)">
+    <div class="result" data-ng-repeat="artist in artists" data-ng-click="showCollabs(this, $index)">
       <div class="artist-display">
         <div class="result-info">
           <h4 class="result-header">{{artist.info.name}}</h4>
