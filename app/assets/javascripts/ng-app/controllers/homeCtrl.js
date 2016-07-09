@@ -8,21 +8,25 @@
 
 				// scope variables
 				$scope.selectedIndex;
-				$scope.keywords;
+				$scope.keywords = '';
 				$scope.artists;
 				$scope.locations = [];
+
+				var searcher = document.querySelector(".search-box");
 
 				// searches through all artists and brings back individual objects with
 				// // info and list of collaborators
 				$scope.search = function(){
-					$scope.affiliates = [];
-					$http.get('/artists', {params: {search: $scope.keywords}}).then(
-						function(res){
-						$scope.artists = res.data;
-					},
-					function(error){
-						console.log(error);
-					});
+					$scope.artists = [];
+					if($scope.keywords.length >= 1){
+						$http.get('/artists', {params: {search: $scope.keywords}}).then(
+							function(res){
+							$scope.artists = res.data;
+						},
+						function(error){
+							console.log(error);
+						});
+					}
 				}
 
 				// trigger ng-show to display the collaborators for each artist on click
