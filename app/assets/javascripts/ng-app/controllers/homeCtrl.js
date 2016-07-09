@@ -1,74 +1,71 @@
-angular.module('affApp')
+"use strict";
+(function(){
+	angular.module('affApp')
 	.controller('HomeCtrl', [
 		'$scope',
 		'$http',
 		function ($scope, $http) {
 
+				// scope variables
+				$scope.selectedIndex;
 				$scope.keywords;
 				$scope.artists;
+				$scope.locations;
 
-				$scope.showCollabs = function(context){
-					if(context.showing === true){
-						context.showing = false;
-					} else {
-						context.showing = true;
-					}
-
-				}
-
-				// searches through all artists and bring back individual objects with
+				// searches through all artists and brings back individual objects with
 				// // info and list of collaborators
 				$scope.search = function(){
 					$scope.affiliates = [];
 					$http.get('/artists', {params: {search: $scope.keywords}}).then(
 						function(res){
 						$scope.artists = res.data;
-						console.log(res.data);
 					},
 					function(error){
 						console.log(error);
 					});
 				}
 
-				$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 3 };
-				$scope.options = {
-					styles: [
-								    {
-								        "featureType": "water",
-								        "stylers": [
-								            {
-								                "color": "#000000"
-								            }
-								        ]
-								    },
-								    {
-								        "featureType": "administrative.country",
-								        "elementType": "labels",
-								        "stylers": [
-								            {
-								                "visibility": "off"
-								            }
-								        ]
-								    },
-										{
-								        "featureType": "landscape.natural",
-								        "elementType": "all",
-								        "stylers": [
-								            {
-								                "color": "#ffffff"
-								            }
-								        ]
-								    },
-										{
-								        "featureType": "administrative.province",
-								        "elementType": "labels",
-								        "stylers": [
-								            {
-								                "visibility": "off"
-								            }
-								        ]
-								    }
-									]
+				// trigger ng-show to display the collaborators for each artist on click
+				$scope.showCollabs = function(index){
+					var collabs = getCollabs(index);
+					var artistLocations = getLocations(collabs);
 				}
+
+				// grab the collaborators for a selected artist
+				function getCollabs(index){
+					return $scope.artists[index].collabs;
+				}
+
+				// grab the city and country of each collaborator
+				function getLocations(collabArray){
+					$scope.locations = [];
+					collabArray.forEach(function(collab){
+						var locationObj = {};
+						locationObj.name = collab.name;
+						locationObj.id = collab.id;
+						// grab geocode api response and parse results to get long / lat
+						geoCode(collab.city, collab.country, function(res){
+							// put long / lat into an object
+								locationObj.latitude = res.data.results[0].geometry.location.lat;
+								locationObj.longitude = res.data.results[0].geometry.location.lng;
+						} )
+						// put object into an array
+						$scope.locations.push(locationObj);
+					})
+					console.log($scope.locations);
+					return $scope.locations;
+				}
+
+				// use the city and country in call to geocode api
+				function geoCode(city, country, callback){
+					return $http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + city + ",+" + "country")
+							 .then(callback, function(error){
+								 console.log(error);
+							 });
+				}
+
+
+
 		}
 	]);
+})();
