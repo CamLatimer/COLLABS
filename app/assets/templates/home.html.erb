@@ -1,6 +1,10 @@
 <div class="map-container" data-ng-controller="MapCtrl">
   <ui-gmap-google-map center='map.center' zoom='map.zoom' options='options'>
-  </ui-gmap-google-map>
+    <div class="">
+      <ui-gmap-markers models='locations' coords="'self'"></ui-gmap-markers>
+    </ui-gmap-google-map>
+    </div>
+
 </div>
 
 <div class="container search search__pane">
@@ -11,7 +15,7 @@
     </form>
   </div>
   <div class="results-container">
-    <div class="result" data-ng-repeat="artist in artists" data-ng-click="showCollabs(this, $index)">
+    <div class="result" data-ng-repeat="artist in artists" ng-click="showCollabs($index); $parent.selectedIndex=$index">
       <div class="artist-display">
         <div class="result-info">
           <h4 class="result-header">{{artist.info.name}}</h4>
@@ -22,7 +26,7 @@
           <img class="artist-pic" src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="" />
         </div>
       </div>
-      <div class="drop-down result-affiliates" data-ng-show="showing">
+      <div class="drop-down result-affiliates" data-ng-show="$parent.selectedIndex == $index">
         <h5>Collaborators: </h5>
         <h6 class="collab-item" data-ng-repeat="collab in artist.collabs">{{collab.name}}</h6>
       </div>
