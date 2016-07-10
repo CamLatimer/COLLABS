@@ -17,6 +17,7 @@
 				// searches through all artists and brings back individual objects with
 				// // info and list of collaborators
 				$scope.search = function(){
+					$scope.selectedIndex = null; // makes sure same ng-show behavior isn't present in ng repeat list when a new search is made
 					$scope.artists = [];
 					if($scope.keywords.length >= 1){
 						$http.get('/artists', {params: {search: $scope.keywords}}).then(
