@@ -1,5 +1,13 @@
 [
   {
+    "name": "Tove Lo",
+    "city": "Stockholm",
+    "state": "",
+    "country": "Sweden",
+    "details": "!!!!!!!",
+    "sounds": "https://soundcloud.com/tovelo"
+  },
+  {
     "name": "ASAP Ferg",
     "city": "Harlem",
     "state": "NY",
@@ -46,14 +54,6 @@
     "country": "USA",
     "details": "genius!!!!",
     "sounds":"https://soundcloud.com/mr_carmack"
-  },
-  {
-    "name": "ZHU",
-    "city": "Berkely",
-    "state": "California",
-    "country": "USA",
-    "details": "genius!!!!",
-    "sounds": "https://soundcloud.com/zhu"
   },
   {
     "name": "Kanye West",
@@ -120,36 +120,12 @@
     "sounds": "http://calvinharris.com/"
   },
   {
-    "name": "Alesso",
-    "city": "Stockholm",
-    "state": "",
-    "country": "Sweden",
-    "details": "",
-    "sounds": "https://soundcloud.com/alesso"
-  },
-  {
-    "name": "Action Bronson",
-    "city": "Queens",
-    "state": "NY",
-    "country": "USA",
-    "details": "",
-    "sounds": "https://soundcloud.com/actionbronson"
-  },
-  {
     "name": "Anna Lunoe",
     "city": "Sydney",
     "state": "",
     "country": "Australia",
     "details": "",
     "sounds": "https://soundcloud.com/anna-lunoe"
-  },
-  {
-    "name": "Kaytranada",
-    "city": "Montreal",
-    "state": "",
-    "country": "Canada",
-    "details": "",
-    "sounds": "https://soundcloud.com/kaytranada"
   },
   {
     "name": "Flume",

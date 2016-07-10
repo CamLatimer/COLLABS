@@ -17,7 +17,6 @@ falc = Artist.find_by(name: 'Falcons')
 gold = Artist.find_by(name: 'Goldlink')
 diplo = Artist.find_by(name: 'Diplo')
 skril = Artist.find_by(name: 'Skrillex')
-zhu = Artist.find_by(name: 'ZHU')
 ferg = Artist.find_by(name: 'ASAP Ferg')
 drake = Artist.find_by(name: 'Drake')
 chainz = Artist.find_by(name: '2 Chainz')
@@ -27,12 +26,16 @@ gj = Artist.find_by(name: 'Gent & Jawns')
 future = Artist.find_by(name: 'Future')
 calvin = Artist.find_by(name: 'Calvin Harris')
 rih = Artist.find_by(name: 'Rihanna')
+flume = Artist.find_by(name: 'Flume')
+tove = Artist.find_by(name: 'Tove Lo')
+
+flume.collaborators << [tove]
 
 falc.collaborators << [gold, car]
 
 ferg.collaborators << [future]
 
-skril.collaborators << [diplo, ferg, zhu]
+skril.collaborators << [diplo, ferg]
 
 diplo.collaborators << [gj, chainz]
 
