@@ -7,9 +7,9 @@
   		'ngAnimate',
   		'ui.router',
   		'templates',
-      'uiGmapgoogle-maps'
+      'leaflet-directive'
   	])
-  	.config(function ($stateProvider, $urlRouterProvider, $locationProvider,uiGmapGoogleMapApiProvider) {
+  	.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
   		$stateProvider
   			.state('home', {
@@ -17,11 +17,6 @@
   				templateUrl: 'home.html',
   				controller: 'HomeCtrl'
   			});
-
-        uiGmapGoogleMapApiProvider.configure({
-        key: 'AIzaSyD3ZEPn9qk30GUFswo1z_IfIwFIqlHYPcc',
-        libraries: 'weather,geometry,visualization'
-    });
 
   		// default fallback route
   		$urlRouterProvider.otherwise('/');

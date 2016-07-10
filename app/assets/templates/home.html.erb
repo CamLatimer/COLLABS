@@ -1,11 +1,7 @@
 <div class="map-container" data-ng-controller="MapCtrl">
-  <ui-gmap-google-map center='map.center' zoom='map.zoom' options='options'>
-    <div class="">
-      <ui-gmap-markers models='locations' coords="'self'"></ui-gmap-markers>
-    </ui-gmap-google-map>
-    </div>
-
+<leaflet id="mapid" center="center"></leaflet>
 </div>
+
 
 <div class="container search search__pane">
   <div class="search-form-holder">

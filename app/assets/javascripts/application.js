@@ -10,12 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require lodash.js
+//= require leaflet
 //= require angular
 //= require angular-animate
 //= require angular-ui-router
 //= require angular-rails-templates
-//= require angular-simple-logger.js
-//= require angular-google-maps.min.js
+//= require angular-leaflet-directive.min.js
 //= require_tree .
 //= require_tree ../templates
