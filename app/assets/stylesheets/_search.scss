@@ -27,7 +27,7 @@ form:hover .search-box{
   background: rgba(0, 170, 230, .4);
 }
 form:hover .submit-btn{
-  background: orange;
+  background: #ef7b7b;
 }
 input[type="search"]{
   margin: 0;
@@ -67,6 +67,6 @@ input[type="submit"]{
 /* Handle */
 ::-webkit-scrollbar-thumb {
 
-    background: orange;
+    background: #ef7b7b;
     // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
