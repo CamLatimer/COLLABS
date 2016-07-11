@@ -29,6 +29,7 @@ rih = Artist.find_by(name: 'Rihanna')
 flume = Artist.find_by(name: 'Flume')
 tove = Artist.find_by(name: 'Tove Lo')
 
+rih.collaborators << [calvin, drake, kanye]
 flume.collaborators << [tove]
 
 falc.collaborators << [gold, car]
