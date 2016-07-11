@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Nova+Slim|Trirong:300i,400,400i,600,600i';
+@import 'https://fonts.googleapis.com/css?family=Bungee+Hairline';
 @import '_btn.scss';
 @import "_search.scss";
 @import "_results.scss";
@@ -9,9 +9,8 @@ html, body{
   height: 100%;
   padding: 0; margin: 0;
   // font-family: 'Trirong', serif;
-  font-family: 'Nova Slim', cursive;
+  font-family: 'Bungee Hairline', cursive;
   font-weight: 400;
-  font-style: italic;
   overflow: hidden;
 }
 ul{

@@ -27,7 +27,8 @@ form:hover .search-box{
   background: rgba(0, 170, 230, .4);
 }
 form:hover .submit-btn{
-  background: #ef7b7b;
+  background: #fffb7b;
+  color: gray;
 }
 input[type="search"]{
   margin: 0;
@@ -36,7 +37,7 @@ input[type="search"]{
   font-size: 2rem;
   width: 82%;
   background: black;
-  font-family: 'Nova Slim', cursive;
+  font-family: 'Bungee Hairline', cursive;
   font-weight: 400;
   font-style: italic;
 }
@@ -51,6 +52,7 @@ input[type="submit"]{
   float: right;
   margin: 0;
   width: 3.1rem;
+  font-family: 'Bungee Hairline', cursive;
 }
 
 /* Let's get this party started */
@@ -67,6 +69,6 @@ input[type="submit"]{
 /* Handle */
 ::-webkit-scrollbar-thumb {
 
-    background: #ef7b7b;
+    background: #fffb7b;
     // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }

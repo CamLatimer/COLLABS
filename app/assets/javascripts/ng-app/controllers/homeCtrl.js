@@ -48,14 +48,16 @@
 							// put long / lat into an object
 								locationObj.lat = res.data.results[0].geometry.location.lat;
 								locationObj.lng = res.data.results[0].geometry.location.lng;
+								console.log(locationObj)
 						})
+
 					})
 					return locations;
 				}
 
 				// use the city and country in call to geocode api
 				function geoCode(city, country, callback){
-					return $http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + city + ",+" + "country")
+					return $http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + city + ",+" + country)
 							 .then(callback, function(error){
 								 console.log(error);
 							 });
