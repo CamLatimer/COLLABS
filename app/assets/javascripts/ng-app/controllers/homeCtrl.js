@@ -8,11 +8,7 @@
 
 				// scope variables
 				$scope.selectedIndex;
-				$scope.keywords = '';
 				$scope.artists;
-				$scope.locations = [];
-
-				var searcher = document.querySelector(".search-box");
 
 				// searches through all artists and brings back individual objects with
 				// // info and list of collaborators
@@ -33,7 +29,7 @@
 				// trigger ng-show to display the collaborators for each artist on click
 				$scope.showCollabs = function(index){
 					var collabs = getCollabs(index);
-					var artistLocations = getLocations(collabs);
+					$scope.markers = getLocations(collabs);
 				}
 
 				// grab the collaborators for a selected artist
@@ -43,22 +39,18 @@
 
 				// grab the city and country of each collaborator
 				function getLocations(collabArray){
-					$scope.locations = [];
+					var locations = {};
 					collabArray.forEach(function(collab){
 						var locationObj = {};
-						locationObj.name = collab.name;
-						locationObj.id = collab.id;
+						locations[collab.name] = locationObj;
 						// grab geocode api response and parse results to get long / lat
 						geoCode(collab.city, collab.country, function(res){
 							// put long / lat into an object
-								locationObj.latitude = res.data.results[0].geometry.location.lat;
-								locationObj.longitude = res.data.results[0].geometry.location.lng;
-						} )
-						// put object into an array
-						$scope.locations.push(locationObj);
+								locationObj.lat = res.data.results[0].geometry.location.lat;
+								locationObj.lng = res.data.results[0].geometry.location.lng;
+						})
 					})
-					console.log($scope.locations);
-					return $scope.locations;
+					return locations;
 				}
 
 				// use the city and country in call to geocode api
